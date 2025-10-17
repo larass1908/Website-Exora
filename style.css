@@ -1,0 +1,661 @@
+/* ------------------------------
+   GLOBAL BASE STYLE
+------------------------------ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #222;
+  line-height: 1.6;
+  background-color: #fff;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: 0.3s;
+}
+
+ul {
+  list-style: none;
+}
+
+.wrap {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.center {
+  text-align: center;
+}
+
+.mt-20 {
+  margin-top: 20px;
+}
+
+.mt-24 {
+  margin-top: 24px;
+}
+
+/* ------------------------------
+   HEADER
+------------------------------ */
+.site-header {
+  background-color: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 0;
+}
+
+.logo {
+  height: 55px;
+}
+
+.main-nav ul {
+  display: flex;
+  gap: 25px;
+}
+
+.nav-link {
+  font-weight: 500;
+  color: #333;
+  padding-bottom: 5px;
+}
+
+.nav-link:hover {
+  color: #1f78a7;
+}
+
+/* Active page */
+.nav-link.active {
+  color: #1f78a7;
+  font-weight: 700;
+  border-bottom: 2px solid #1f78a7;
+}
+
+/* WhatsApp Button */
+.btn-cta {
+  background-color: #1f78a7;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: 600;
+}
+
+.btn-cta:hover {
+  background-color: #155f84;
+}
+
+/* ------------------------------
+   HERO SECTION
+------------------------------ */
+.hero {
+  position: relative;
+  background-image: url('transport-logistics-concept.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+}
+
+/* Overlay transparan untuk menonjolkan teks */
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 20, 40, 0.55); /* Gelap transparan */
+  z-index: 1;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.55);
+}
+
+/* Konten hero di atas overlay */
+.hero-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  padding: 20px;
+}
+
+.hero-inner h1 {
+  font-size: 2.6rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  line-height: 1.3;
+}
+
+.hero-inner p {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  opacity: 0.95;
+}
+
+.hero-btn-wrapper {
+  margin-top: 10px;
+}
+
+.hero .btn {
+  margin: 20px 10px 0;
+  padding: 10px 25px;
+  border-radius: 25px;
+  font-weight: 600;
+}
+
+.btn-primary {
+  display: inline-block;
+  background: #ffcc00;
+  color: #003049;
+  font-weight: 600;
+  padding: 14px 28px;
+  border-radius: 50px;
+  text-decoration: none;
+  margin-top: 25px;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.btn-outline {
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: #ffd633;
+  transform: translateY(-3px);
+}
+
+.btn-outline:hover {
+  background-color: #fff;
+  color: #1f78a7;
+}
+
+/* ------------------------------
+   SECTION GENERAL
+------------------------------ */
+.section {
+  padding: 80px 0;
+}
+
+.section h2, 
+.section h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1f78a7;
+  margin-bottom: 20px;
+}
+
+.section p {
+  color: #444;
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+/* Two-column layout */
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Bullets */
+.bullets li {
+  padding-left: 20px;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.bullets li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #1f78a7;
+  font-weight: bold;
+}
+
+/* ------------------------------
+   OUR STORY / OUR SOLUTION / IMPACT
+------------------------------ */
+.story-text h2 {
+  color: #1f78a7;
+}
+
+.story-image img {
+  border-radius: 10px;
+}
+
+.impact {
+  background-color: #f6f9fb;
+  text-align: center;
+}
+
+.impact-cards {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin-top: 30px;
+}
+
+.impact-card h3 {
+  font-size: 2.5rem;
+  color: #1f78a7;
+}
+
+.impact-card p {
+  font-weight: 500;
+}
+
+/* ------------------------------
+   TESTIMONIAL (WHAT OUR PARTNERS SAY)
+------------------------------ */
+.testimonials {
+  background-color: #f9fafb;
+  text-align: center;
+}
+
+.testimonials h2 {
+  color: #1f78a7;
+  margin-bottom: 40px;
+}
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+  gap: 30px;
+  justify-items: center;
+}
+
+.testimonial-card {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 25px;
+  width: 100%;
+  max-width: 350px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.testimonial-card img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  object-fit: cover;
+}
+
+.testimonial-card h4 {
+  color: #1f78a7;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+/* ------------------------------
+   PRODUCT PAGE
+------------------------------ */
+.product-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+  gap: 25px;
+}
+
+.pcard {
+  border: 1px solid #eee;
+  border-radius: 10px;
+  text-align: center;
+  padding: 25px 10px;
+  background: #fff;
+  transition: all 0.3s;
+}
+
+.pcard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+.pcard h4 {
+  color: #1f78a7;
+  font-weight: 600;
+}
+
+/* ------------------------------
+   CONTACT PAGE
+------------------------------ */
+.contact-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.contact-card {
+  border: 1px solid #eee;
+  border-radius: 10px;
+  padding: 30px;
+  width: 280px;
+  background: #fff;
+  transition: 0.3s;
+}
+
+.contact-card:hover {
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+.contact-card h3 {
+  color: #1f78a7;
+  margin-bottom: 10px;
+}
+
+/* ------------------------------
+   FOOTER
+------------------------------ */
+.site-footer {
+  background-color: #f5f7fa;
+  color: #333;
+  padding: 60px 0 30px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+  gap: 40px;
+}
+
+.footer-logo {
+  height: 50px;
+  margin-bottom: 15px;
+}
+
+.footer-about p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.footer-links h4,
+.footer-contact h4 {
+  color: #1f78a7;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.footer-links ul li {
+  margin-bottom: 8px;
+}
+
+.footer-links a {
+  color: #333;
+}
+
+.footer-links a:hover {
+  color: #1f78a7;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 30px;
+  border-top: 1px solid #ddd;
+  color: #777;
+  font-size: 0.9rem;
+}
+
+/* ------------------------------
+   RESPONSIVE
+------------------------------ */
+@media (max-width: 600px) {
+  .header-inner {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .main-nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero {
+    height: 70vh;
+  }
+
+  .impact-cards {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+/* PAGE HERO */
+.page-hero {
+  background: linear-gradient(to right, #0077b6, #00b4d8);
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.page-hero h1 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.page-hero p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+/* PRODUCT ICONS */
+.product-icons {
+  background: #f8f9fb;
+  padding: 60px 0;
+}
+
+.icon-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.icon-card {
+  background: white;
+  border-radius: 12px;
+  padding: 25px 20px;
+  width: 200px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.icon-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+}
+
+.icon-card img {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 10px;
+}
+
+.icon-card h3 {
+  color: #003049;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+/* PRODUCT LIST */
+.product-section {
+  padding: 60px 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.product-section h2 {
+  color: #0077b6;
+  margin-top: 40px;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #0077b6;
+  display: inline-block;
+}
+
+.product-section ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.product-section li {
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+  color: #333;
+  font-weight: 400;
+}
+
+/* CONTACT PAGE */
+.contact-hero {
+  background: linear-gradient(rgba(0, 40, 70, 0.6), rgba(0, 40, 70, 0.6)), url('transport-logistics-concept.jpg') center/cover no-repeat;
+  color: white;
+  text-align: center;
+  padding: 120px 20px;
+}
+
+/* CONTACT PAGE */
+.contact-section {
+  padding: 80px 20px;
+  background: #f7f9fc;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 40px;
+  text-align: center;
+}
+
+.contact-card {
+  background: white;
+  border-radius: 15px;
+  padding: 50px 25px;
+  box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 22px rgba(0,0,0,0.12);
+}
+
+.icon-circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #e6f0fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px auto;
+}
+
+.icon-circle img {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+  filter: brightness(0) saturate(100%) invert(28%) sepia(85%) saturate(1700%) hue-rotate(190deg) brightness(94%) contrast(92%);
+}
+
+/* CONTACT PAGE */
+/* CONTACT PAGE */
+.contact-section {
+  padding: 80px 20px;
+  background: #f7f9fc;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 40px;
+  text-align: center;
+}
+
+.contact-card {
+  background: white;
+  border-radius: 15px;
+  padding: 50px 25px;
+  box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 22px rgba(0,0,0,0.12);
+}
+
+.icon-circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #e6f0fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px auto;
+}
+
+.icon-circle img {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+  filter: brightness(0) saturate(100%) invert(28%) sepia(85%) saturate(1700%) hue-rotate(190deg) brightness(94%) contrast(92%);
+}
+
+.contact-card h3 {
+  font-weight: 600;
+  color: #003049;
+  margin-bottom: 10px;
+}
+
+.contact-card p {
+  color: #555;
+  font-size: 15px;
+}
+
+.contact-card a {
+  color: #0077cc;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.contact-card a:hover {
+  text-decoration: underline;
+}
